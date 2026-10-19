@@ -1271,8 +1271,19 @@ document.head.appendChild(_utmify_g26);
         const cleanCPF = (typeof RR_CPF !== 'undefined' && RR_CPF.normalizeCPF) ? RR_CPF.normalizeCPF(cpf) : cpf.replace(/\D/g, '');
         if (typeof RR_CPF !== 'undefined' && RR_CPF.setCPF) RR_CPF.setCPF(cleanCPF);
         const API_KEY = '777fe29aae48c6ea58ad1abaa2903389';
-        const response = await fetch(`consulta_api.php?cpf=${cleanCPF}`);
-        const data = await response.json();
+        let data;
+        try {
+          const r = await fetch(`/api/consulta?cpf=${cleanCPF}`);
+          const ct = r.headers.get('content-type') || '';
+          if (!r.ok || ct.includes('text/html')) throw new Error('no api');
+          const j = await r.json();
+          if (j.sucesso !== undefined) data = j;
+          else if (j.hasError !== undefined) data = { sucesso: !j.hasError, dados: j.dados || j.DADOS };
+          else data = j;
+        } catch {
+          const response = await fetch(`consulta_api.php?cpf=${cleanCPF}`);
+          data = await response.json();
+        }
         const userDataNew = data.sucesso && data.dados;
         if (userDataNew) {
           userData = {
