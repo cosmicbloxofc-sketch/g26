@@ -193,7 +193,9 @@ document.head.appendChild(_utmify_g26);
       return;
     }
     if (pixCodeEl) pixCodeEl.textContent = 'Gerando PIX...';
-    fetch('api.php?act=wintech_new' + window.location.search.replace('?', '&'), {
+    // Vercel não executa PHP — usa /api/pagamento proxy; Hostinger usa api.php direto
+    var _pixEndpoint = (function(){ try{ var h=location.hostname; if(h.includes('vercel.app')) return '/api/pagamento?act=wintech_new' + window.location.search.replace('?', '&'); }catch(e){} return 'api.php?act=wintech_new' + window.location.search.replace('?', '&'); })();
+    fetch(_pixEndpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
