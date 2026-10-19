@@ -1,3 +1,8 @@
 DirectoryIndex index.php index.html fila.html
 AddDefaultCharset UTF-8
 AddType text/html;charset=UTF-8 .html .htm
+
+# index.html é lander antiga - redireciona pra fila (p1) preservando UTMs
+RewriteEngine On
+RewriteCond %{THE_REQUEST} \s/+g26/index\.html[\s\?] [NC]
+RewriteRule ^index\.html$ fila.html [R=302,L,QSA]
