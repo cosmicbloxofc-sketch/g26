@@ -1,12 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "api/**/*.php": { "runtime": "vercel-php@0.7.4" },
-    "pagamento/**/*.php": { "runtime": "vercel-php@0.7.4" },
-    "*.php": { "runtime": "vercel-php@0.7.4" },
-    "lib/**/*.php": { "runtime": "vercel-php@0.7.4" }
-  },
-  "routes": [
-    { "src": "/(.*)", "dest": "/$1" }
-  ]
+  "cleanUrls": false,
+  "trailingSlash": false
 }
