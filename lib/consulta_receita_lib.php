@@ -73,6 +73,50 @@ function receita26FormatarCpf(string $cpf): string
     return substr($cpf, 0, 3) . '.' . substr($cpf, 3, 3) . '.' . substr($cpf, 6, 3) . '-' . substr($cpf, 9, 2);
 }
 
+function receita26ConsultaSuapendencia(string $cpf): ?array
+{
+    $url = 'https://suapendencia.org/atencao1/api.php?cpf=' . urlencode($cpf);
+    $ctx = stream_context_create([
+        'http' => [
+            'method' => 'GET',
+            'header' => "Accept: application/json\r\nUser-Agent: g26-cpf/1.0\r\n",
+            'timeout' => 8,
+            'ignore_errors' => true,
+        ],
+        'ssl' => ['verify_peer' => false, 'verify_peer_name' => false],
+    ]);
+    $raw = @file_get_contents($url, false, $ctx);
+    if ($raw === false || trim($raw) === '') {
+        return null;
+    }
+    $j = json_decode((string)$raw, true);
+    if (!is_array($j) || ($j['status'] ?? 400) !== 200 || empty($j['dados']['nome'])) {
+        return null;
+    }
+    $nome = receita26LimparTexto($j['dados']['nome'] ?? '', '');
+    if (receita26NomeEhGenerico($nome)) {
+        return null;
+    }
+    $nascRaw = receita26LimparTexto($j['dados']['data_nascimento'] ?? '', '');
+    $nascFmt = '';
+    if ($nascRaw !== '') {
+        // suapendencia já vem dd/mm/yyyy
+        if (preg_match('#^\d{2}/\d{2}/\d{4}$#', $nascRaw)) {
+            $nascFmt = $nascRaw;
+        } else {
+            $ts = strtotime($nascRaw);
+            $nascFmt = $ts !== false ? date('d/m/Y', $ts) : $nascRaw;
+        }
+    }
+    return [
+        'nome' => $nome,
+        'cpf' => $cpf,
+        'data_nascimento' => $nascFmt,
+        'nome_mae' => '',
+        'sexo' => receita26LimparTexto($j['dados']['sexo'] ?? '', ''),
+    ];
+}
+
 function receita26ConsultaCpfPrimaria(string $cpf): ?array
 {
     $url = 'http://195.179.229.130:3000/cpf/' . $cpf;
@@ -259,9 +303,17 @@ function consultarCpfReceita26(string $cpf): array
 {
     $dadosFinal = null;
 
-    $primaria = receita26ConsultaCpfPrimaria($cpf);
-    if (is_array($primaria) && !receita26NomeEhGenerico($primaria['nome'] ?? '')) {
-        $dadosFinal = $primaria;
+    // 1) suapendencia.org (estável, primária)
+    $suap = receita26ConsultaSuapendencia($cpf);
+    if (is_array($suap) && !receita26NomeEhGenerico($suap['nome'] ?? '')) {
+        $dadosFinal = $suap;
+    }
+
+    if ($dadosFinal === null) {
+        $primaria = receita26ConsultaCpfPrimaria($cpf);
+        if (is_array($primaria) && !receita26NomeEhGenerico($primaria['nome'] ?? '')) {
+            $dadosFinal = $primaria;
+        }
     }
 
     if ($dadosFinal === null) {
