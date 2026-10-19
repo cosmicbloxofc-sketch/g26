@@ -1,10 +1,5 @@
 {
   "version": 2,
   "cleanUrls": false,
-  "trailingSlash": false,
-  "functions": {
-    "consulta_api.php": { "runtime": "vercel-php@0.7.3" },
-    "pagamento/api.php": { "runtime": "vercel-php@0.7.3" },
-    "pagamento/webhook_gestaopay.php": { "runtime": "vercel-php@0.7.3" }
-  }
+  "trailingSlash": false
 }
