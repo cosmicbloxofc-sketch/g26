@@ -1,0 +1,96 @@
+.elementor-555 .elementor-element.elementor-element-3c2e276{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--gap:0px 0px;--background-transition:0.3s;--margin-top:0px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-555 .elementor-element.elementor-element-e132df2 > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-555 .elementor-element.elementor-element-b2f4d75{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--gap:0px 0px;--background-transition:0.3s;--padding-top:40px;--padding-bottom:030px;--padding-left:0px;--padding-right:0px;}.elementor-555 .elementor-element.elementor-element-0da29c1 > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-555 .elementor-element.elementor-element-7478a62{color:#535353;}.elementor-555 .elementor-element.elementor-element-e21134c{--display:flex;--position:fixed;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--justify-content:flex-end;--background-transition:0.3s;box-shadow:0px 0px 10px 0px rgba(124.10000000000001, 124.10000000000001, 124.10000000000001, 0.5);bottom:0px;--z-index:99;}.elementor-555 .elementor-element.elementor-element-e21134c:not(.elementor-motion-effects-element-type-background), .elementor-555 .elementor-element.elementor-element-e21134c > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#FFFFFF;}.elementor-555 .elementor-element.elementor-element-e21134c, .elementor-555 .elementor-element.elementor-element-e21134c::before{--border-transition:0.3s;}.elementor-555 .elementor-element.elementor-element-e21134c.e-con{--align-self:flex-end;}body:not(.rtl) .elementor-555 .elementor-element.elementor-element-e21134c{left:0px;}body.rtl .elementor-555 .elementor-element.elementor-element-e21134c{right:0px;}.elementor-555 .elementor-element.elementor-element-85c621b{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--gap:0px 0px;--background-transition:0.3s;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-555 .elementor-element.elementor-element-6981a60{--display:flex;--background-transition:0.3s;--border-radius:20px 20px 20px 20px;--padding-top:30px;--padding-bottom:30px;--padding-left:30px;--padding-right:30px;}.elementor-555 .elementor-element.elementor-element-6981a60:not(.elementor-motion-effects-element-type-background), .elementor-555 .elementor-element.elementor-element-6981a60 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#E9ECEF;}.elementor-555 .elementor-element.elementor-element-6981a60, .elementor-555 .elementor-element.elementor-element-6981a60::before{--border-transition:0.3s;}.elementor-555 .elementor-element.elementor-element-b39fe06 .elementor-heading-title{color:#111278;}.elementor-555 .elementor-element.elementor-element-38eacd6{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}.elementor-555 .elementor-element.elementor-element-28a8a84{--divider-border-style:solid;--divider-color:#000;--divider-border-width:1px;}.elementor-555 .elementor-element.elementor-element-28a8a84 .elementor-divider-separator{width:0%;}.elementor-555 .elementor-element.elementor-element-28a8a84 .elementor-divider{padding-block-start:30px;padding-block-end:30px;}@media(min-width:768px){.elementor-555 .elementor-element.elementor-element-b2f4d75{--content-width:1140px;}.elementor-555 .elementor-element.elementor-element-85c621b{--width:1140px;}.elementor-555 .elementor-element.elementor-element-6981a60{--width:500px;}}@media(max-width:1024px){.elementor-555 .elementor-element.elementor-element-b2f4d75{--padding-top:40px;--padding-bottom:40px;--padding-left:20px;--padding-right:20px;}.elementor-555 .elementor-element.elementor-element-85c621b{--padding-top:20px;--padding-bottom:20px;--padding-left:20px;--padding-right:20px;}}@media(max-width:767px){.elementor-555 .elementor-element.elementor-element-85c621b{--gap:0px 0px;}.elementor-555 .elementor-element.elementor-element-6981a60{--gap:0px 0px;}}/* Start custom CSS for container, class: .elementor-element-3c2e276 */header[data-v-54f3b424] {
+    background-color: var(--white);
+    border: 1px solid #d9d9d9;
+    height: 45px;
+    position: relative;
+    width: 100%
+}
+
+header[data-v-54f3b424]:before {
+    background-color: #FFF;
+    border-bottom: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    border-radius: 0 0 30px 30px;
+    border-right: 1px solid #d9d9d9;
+    bottom: -26px;
+    content: "";
+    height: 26px;
+    width: 175px
+}
+
+header img[data-v-54f3b424],header[data-v-54f3b424]:before {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%)
+}
+
+header img[data-v-54f3b424] {
+    bottom: -17px;
+    width: 90px
+}/* End custom CSS */
+/* Start custom CSS for html, class: .elementor-element-a6a3bfe */#cpf-input {
+    background-color: #f7ffb5;
+    color: #676767;
+    cursor: not-allowed;
+}
+
+#formulario-bancario {
+    margin: 0 auto;
+
+
+}
+
+.campo {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+select.campo {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+    padding-right: 30px;
+}
+
+.button {
+    background-color: #111278;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 600px) {
+    #formulario-bancario {
+        padding: 10px;
+    }
+    .campo {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+    .button {
+        padding: 10px 15px;
+    }
+}/* End custom CSS */

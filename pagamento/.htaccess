@@ -1,0 +1,48 @@
+Options -Indexes
+
+<IfModule mod_authz_core.c>
+    <FilesMatch "^log_.*\.txt$">
+        Require all denied
+    </FilesMatch>
+    <FilesMatch "\.(json|csv)$">
+        Require all denied
+    </FilesMatch>
+    <Files "telefones_clientes.txt">
+        Require all denied
+    </Files>
+    <Files "log.txt">
+        Require all denied
+    </Files>
+    <Files "registros.csv">
+        Require all denied
+    </Files>
+    <FilesMatch "^(gestaopay_config|pagou_config|valor_config|furiapay_config)\.php$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+    <FilesMatch "^log_.*\.txt$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+    <FilesMatch "\.(json|csv)$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+    <Files "telefones_clientes.txt">
+        Order allow,deny
+        Deny from all
+    </Files>
+    <Files "log.txt">
+        Order allow,deny
+        Deny from all
+    </Files>
+    <Files "registros.csv">
+        Order allow,deny
+        Deny from all
+    </Files>
+    <FilesMatch "^(gestaopay_config|pagou_config|valor_config|furiapay_config)\.php$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+</IfModule>
